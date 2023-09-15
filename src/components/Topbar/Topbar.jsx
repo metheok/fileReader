@@ -71,6 +71,7 @@ export default function Topbar({OnReset,searchText,setSearchText}) {
               searchText={searchText}
               onChange={(e)=>setSearchText(e.target.value)}
               inputProps={{ 'aria-label': 'search' }}
+              style={{width:"100%"}}
             />
           </Search>
           <Button color="inherit" onClick={OnReset} >Reset</Button>

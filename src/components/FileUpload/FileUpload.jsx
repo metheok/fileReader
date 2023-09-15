@@ -2,19 +2,19 @@ import { InputLabel } from '@mui/material';
 import { Input } from '@mui/material'
 import React from 'react'
 import css from './FileUpload.module.css'
-export default function FileUpload({file,setFile}) {
+export default function FileUpload({files,setFiles}) {
   return (
-    <div>
-      <InputLabel color='primary' variant='contained' sx={{mb:1}} htmlFor='file' >Upload File</InputLabel>
+    <div className={css.container} >
+      <InputLabel color='primary' variant='contained' sx={{mb:1}} htmlFor='files' >Upload File</InputLabel>
       <Input type='file'
       accept='.doc, .docx, .xls, .xlsx, application/pdf'
-      name='file'
-      id='file'
-      multiple={false}
+      name='files'
+      id='files'
+      multiple
+      
       // value={file}
       onChange={(e) => {
-        console.log(e.target.files);
-        setFile(e.target.files[0])
+        setFiles(e.target.files)
       }}
       />
     </div>
