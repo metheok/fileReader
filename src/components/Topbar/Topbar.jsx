@@ -68,7 +68,6 @@ export default function Topbar({OnReset,searchText,setSearchText}) {
             <StyledInputBase
               placeholder="Search…"
               value={searchText}
-              searchText={searchText}
               onChange={(e)=>setSearchText(e.target.value)}
               inputProps={{ 'aria-label': 'search' }}
               style={{width:"100%"}}
