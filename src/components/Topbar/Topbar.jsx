@@ -73,7 +73,7 @@ export default function Topbar({OnReset,searchText,setSearchText}) {
               style={{width:"100%"}}
             />
           </Search>
-          <Button color="inherit" onClick={OnReset} >Reset</Button>
+          <Button  sx={{ ml: 2 }} color="error" variant="contained" onClick={OnReset} >Reset</Button>
         </Toolbar>
       </AppBar>
     </Box>
